@@ -1,6 +1,4 @@
----
-- name: My task
-  hosts: https://10.50.25.151:7443/service/versions
-  tasks:
-     - name: Leaving a mark
+- name: Check that you can connect (GET) to a page and it returns a status 200
+  uri:
+    url: https://10.50.25.151:7443/service/versions
        
