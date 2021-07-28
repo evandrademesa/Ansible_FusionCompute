@@ -1,4 +1,4 @@
-- name: get-versions
+- name: get versions
   vars:
     url: "https://10.50.25.151:7443/service/versions"
  
