@@ -1,6 +1,9 @@
+---
+- name: My task
+  hosts: 10.50.25.151
   vars:
-    url: "https://10.50.25.151:7443/service/versions"
- 
+      url: "https://10.50.25.151:7443/service/versions"
+  
   tasks:
        request.get: {url,  verify=False}
   
