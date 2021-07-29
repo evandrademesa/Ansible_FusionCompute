@@ -4,4 +4,5 @@
      - name: Leaving a mark
        uri: 
         url: "https://10.50.25.151:7443/service/versions"
+        verify: false
         return_content: yes
