@@ -4,5 +4,7 @@
      - name: Leaving a mark
        uri: 
         url: "https://10.50.25.151:7443/service/versions"
-        verify: false
+        follow_redirects: none
+        content: {"verify": false}
+        method: get
         return_content: yes
