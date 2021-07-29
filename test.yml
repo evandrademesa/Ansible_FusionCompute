@@ -2,5 +2,5 @@
   hosts: all
   tasks:
      - name: Leaving a mark
-       command: "ping 10.50.25.151 -c 4"
+       command: "hostname"
        
