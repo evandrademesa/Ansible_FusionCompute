@@ -1,9 +1,11 @@
 ---
-- name: My task
+- name: makesure bigip is online
   hosts: 10.50.25.151
-  vars:
-      url: "https://10.50.25.151:7443/service/versions"
+  connection: local
+  gather_facts: false
   
-  tasks:
-       request.get: {url,  verify=False}
-  
+   tasks:
+    - name: check bigip to make sure it is online
+      uri:
+        url: "https://10.50.25.151:7443/service/versions"
+        method: GET
