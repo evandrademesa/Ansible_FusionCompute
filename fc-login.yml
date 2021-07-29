@@ -1,7 +1,7 @@
-- name: test connection
+- name: login
   hosts: localhost
   tasks:
-     - name: versions
+     - name: login
        uri: 
         url: "https://10.50.25.151:7443/service/session"
         validate_certs: no
