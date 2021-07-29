@@ -17,6 +17,8 @@
           X-Auth-UserType: '2'
           X-ENCRIPT-ALGORITHM: '1'
        register: login
-       
-       
-        
+     
+     - name: Print content json dictionary
+      debug:
+        var: login.json  
+     
