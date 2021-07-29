@@ -1,4 +1,5 @@
 - name: test connection
+    hosts: localhost
     uri: 
     url: "https://10.50.25.151:7443/service/versions"
     return_content: yes
