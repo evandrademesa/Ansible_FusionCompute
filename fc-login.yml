@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
     - name: login
-       uri: 
+      uri: 
        url: "https://10.50.25.151:7443/service/session"
        validate_certs: no
        return_content: yes
@@ -16,8 +16,8 @@
          X-Auth-Key: 'Huawei12#$'
          X-Auth-UserType: '2'
          X-ENCRIPT-ALGORITHM: '1'
-       register: login
+      register: login
     
     - name: Print content json dictionary
       debug:
-        var: login.json
+        var: login.json 
