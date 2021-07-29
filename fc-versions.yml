@@ -1,7 +1,4 @@
 - name: test connection
-  
-  tasks:
-     - name: Leaving a mark
-       uri: 
-        url: "https://10.50.25.151:7443/service/versions"
-        return_content: yes
+    uri: 
+    url: "https://10.50.25.151:7443/service/versions"
+    return_content: yes
