@@ -1,9 +1,12 @@
-- name: Pause play until a URL is reachable from this host
-  uri:
-    url: "https://10.50.25.151:7443/service/versions"
-    follow_redirects: none
-    method: GET
-  register: _result
-  until: _result.status == 200
-  retries: 720 # 720 * 5 seconds = 1hour (60*60/5)
-  delay: 5 # Every 5 seconds
+- name: Tasks to download file
+  hosts: all
+  tasks:
+    - name: Pause play until a URL is reachable from this host
+    uri:
+      url: "https://10.50.25.151:7443/service/versions"
+      follow_redirects: none
+      method: GET
+    register: _result
+    until: _result.status == 200
+    retries: 720 # 720 * 5 seconds = 1hour (60*60/5)
+    delay: 5 # Every 5 seconds
