@@ -24,4 +24,4 @@
     
     - name: Print content json dictionary
       debug:
-        var: login.cookies_string 
+        var: login.headers
