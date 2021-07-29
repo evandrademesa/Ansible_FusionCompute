@@ -28,4 +28,4 @@
     
     - name: Print content json dictionary
       debug:
-        var: login.cookies
+        var: login.x_auth_token
