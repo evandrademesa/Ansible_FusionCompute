@@ -1,0 +1,16 @@
+- name: test connection
+  hosts: localhost
+  tasks:
+     - name: versions
+       uri: 
+        url: "https://10.50.25.151:7443/service/session"
+        validate_certs: no
+        method: POST
+        headers: {'Content-Type': 'application/json; charset=UTF-8',
+                 'Accept': 'application/json;version=3;charset=UTF-8',
+                 'Accept-Language': 'en_US', 'X-Auth-User': 'api',
+                'X-Auth-Key': 'Huawei12#$', 'X-Auth-UserType': '2', 'X-ENCRIPT-ALGORITHM': '1'}
+          
+        
+       register: result
+        
