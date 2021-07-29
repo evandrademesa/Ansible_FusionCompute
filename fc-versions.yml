@@ -1,5 +1,5 @@
 - name: test connection
-  hosts: all
+  
   tasks:
      - name: Leaving a mark
        uri: 
