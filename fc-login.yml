@@ -36,9 +36,14 @@
          X-Auth-Token: '{{login.x_auth_token}}'
       register: sites
       
-    - name: Print sites uri
+    - name: Print sites 
       debug:
         var: sites.json
+      
+    - name: get sites uri
+      debug: msg="{{ sites.json | json_query(jmesquery) }}"
+        var: "[*].uri"
+        
         
       
          
