@@ -45,9 +45,26 @@
         msg="{{ sites.json | json_query("sites[*].uri") }}"
       register: site_uri    
         
-    - name: Print sites 
+    - name: Print sitwUri 
       debug:
         var: site_uri.msg[0]    
+        
+    - name: get VMs
+      uri: 
+       url: "https://10.50.25.151:7443/service/{{site_uri.msg[0]}}/vms"
+       validate_certs: no
+       return_content: yes
+       body_format: json
+       method: GET
+       headers: 
+         Content-Type: 'application/json; charset=UTF-8'
+         Accept: 'application/json;version=3;charset=UTF-8'
+         X-Auth-Token: '{{login.x_auth_token}}'
+      register: vms 
+      
+    - name: Print vms 
+      debug:
+        var: vms.json
    
          
     
