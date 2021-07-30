@@ -21,8 +21,7 @@
     - name: Print content json dictionary
       debug:
         var: login.json
-        token1: login.json
-   
+           
     - name: Print tokrn
       debug:
         var: login.x_auth_token
