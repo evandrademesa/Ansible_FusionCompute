@@ -38,7 +38,7 @@
       
     - name: Print sites uri
       debug:
-        var: sites.sites
+        var: sites.json
         
       
          
