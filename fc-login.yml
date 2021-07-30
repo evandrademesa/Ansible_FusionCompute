@@ -47,7 +47,7 @@
         
     - name: Print sites 
       debug:
-        var: site_uri.msg    
+        var: site_uri.msg[0]    
    
          
     
