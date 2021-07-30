@@ -48,7 +48,7 @@
     - name: Display all cluster names
       ansible.builtin.debug:
         var: item
-      loop: "{{ sites.json | community.general.json_query('sites.json[*].uri') }}"    
+      loop: "{{ sites.json | json_query('sites.json[*].uri') }}"    
       
          
     
