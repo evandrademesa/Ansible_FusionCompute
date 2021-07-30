@@ -45,10 +45,6 @@
       vars:
         jmesquery: "sites.json[*].uri"
         
-    - name: Display all cluster names
-      debug:
-        var: item
-      query: "{{ sites.json | json_query('sites.json[*].uri') }}"    
-      
+   
          
     
