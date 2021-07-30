@@ -37,7 +37,7 @@
        method: GET
        headers: 
          Content-Type: 'application/json; charset=UTF-8'
-         Accept: 'application/json;version=3; charset=UTF-8'
+         Accept: 'application/json;version=3;charset=UTF-8'
          X-Auth-Token: {{token1}}
       register: sites
       
