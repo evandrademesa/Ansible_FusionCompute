@@ -17,12 +17,8 @@
          X-Auth-UserType: '2'
          X-ENCRIPT-ALGORITHM: '1'
       register: login
-    
-    - name: Print content json dictionary
-      debug:
-        var: login.json
-           
-    - name: Print tokrn
+        
+    - name: Print token
       debug:
         var: login.x_auth_token
       
@@ -40,10 +36,10 @@
          X-Auth-Token: '{{login.x_auth_token}}'
       register: sites
       
-    - name: Print content sites dictionary
+    - name: Print sites uri
       debug:
-        var: sites.json
-        token1: sites.json
+        var: sites.sites
+        
       
          
     
