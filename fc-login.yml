@@ -51,7 +51,7 @@
         
     - name: get VMs
       uri: 
-       url: "https://10.50.25.151:7443/service/{{site_uri.msg[0]}}/vms"
+       url: "https://10.50.25.151:7443/{{site_uri.msg[0]}}/vms"
        validate_certs: no
        return_content: yes
        body_format: json
