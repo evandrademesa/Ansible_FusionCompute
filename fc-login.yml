@@ -45,7 +45,7 @@
       vars:
         jmesquery: "sites[*].uri"
         
-     - name: Print sites 
+    - name: Print sites 
       debug:
         var: msg    
    
