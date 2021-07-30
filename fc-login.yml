@@ -41,12 +41,9 @@
         var: sites.json
       
     - name: get sites uri
-      debug: msg="{{ sites.json | json_query(jmesquery) }}"
-      vars:
-        jmesquery: "sites[*].uri"
-      debug:
-        var: jmesquery
-      
+      debug: 
+        msg="{{ sites.json | json_query("sites[*].uri") }}"
+          
         
     - name: Print sites 
       debug:
