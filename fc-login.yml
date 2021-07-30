@@ -20,7 +20,8 @@
     
     - name: Print content json dictionary
       debug:
-        var: login.json 
+        var: login.json
+        token1: login.json
    
     - name: Print tokrn
       debug:
@@ -37,6 +38,13 @@
        headers: 
          Content-Type: 'application/json; charset=UTF-8'
          Accept: 'application/json;version=3; charset=UTF-8'
-         X-Auth-Token: login.x_auth_token
+         X-Auth-Token: {{token1}}
+      register: sites
+      
+    - name: Print content sites dictionary
+      debug:
+        var: sites.json
+        token1: sites.json
+      
          
     
