@@ -21,11 +21,22 @@
     - name: Print content json dictionary
       debug:
         var: login.json 
-    
-    - name: Print content json dictionary
-      debug:
-        var: login.cookies_string
-    
-    - name: Print content json dictionary
+   
+    - name: Print tokrn
       debug:
         var: login.x_auth_token
+      register: token
+    
+    - name: get siteID
+      uri: 
+       url: "https://10.50.25.151:7443/service/sites"
+       validate_certs: no
+       return_content: yes
+       body_format: json
+       method: GET
+       headers: 
+         Content-Type: 'application/json; charset=UTF-8'
+         Accept: 'application/json;version=3; charset=UTF-8'
+         X-Auth-Token: token
+         
+    
