@@ -26,7 +26,7 @@
     - name: Print tokrn
       debug:
         var: login.x_auth_token
-      register: token1
+      
     
     - name: get siteID
       uri: 
@@ -38,7 +38,7 @@
        headers: 
          Content-Type: 'application/json; charset=UTF-8'
          Accept: 'application/json;version=3;charset=UTF-8'
-         X-Auth-Token: '{{token1}}'
+         X-Auth-Token: '{{login.x_auth_token}}'
       register: sites
       
     - name: Print content sites dictionary
