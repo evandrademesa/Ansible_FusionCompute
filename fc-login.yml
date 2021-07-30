@@ -43,12 +43,12 @@
     - name: get sites uri
       debug: msg="{{ sites.json | json_query(jmesquery) }}"
       vars:
-        jmesquery: "[*].uri"
+        jmesquery: "sites.json[*].uri"
         
     - name: Display all cluster names
       ansible.builtin.debug:
         var: item
-      loop: "{{ sites.json | json_query('sites.json[*].uri') }}"    
+      query: "{{ sites.json | json_query('sites.json[*].uri') }}"    
       
          
     
