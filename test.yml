@@ -1,7 +1,6 @@
-- name: show-info
+ - name: show-info
   hosts: localhost
-  
- tasks:
+  tasks:
     - name: List variable Example
       debug:
         msg: "{{fusionComputeIP}}"
