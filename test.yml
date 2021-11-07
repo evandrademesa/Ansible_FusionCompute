@@ -3,5 +3,5 @@
    tasks:
     - name: show info login
       debug:
-        msg: "{{fusionComputeIP}} IP  {{headers}}"
+        msg: "{{fusionComputeIP}}"
         
