@@ -1,6 +1,23 @@
-- name: test connection
-  hosts: all
+- name: login
+  hosts: localhost
   tasks:
-     - name: Leaving a mark
-       command: "hostname"
-       
+    - name: login
+      uri: 
+       url: "https://10.50.25.151:7443/service/session"
+       validate_certs: no
+       return_content: yes
+       body_format: json
+       method: POST
+       headers: 
+         Content-Type: 'application/json; charset=UTF-8'
+         Accept: 'application/json;version=3;charset=UTF-8'
+         Accept-Language: 'en_US'
+         X-Auth-User: 'api'
+         X-Auth-Key: 'Huawei12#$'
+         X-Auth-UserType: '2'
+         X-ENCRIPT-ALGORITHM: '1'
+      register: login
+        
+    - name: Print token
+      debug:
+        var: login.x_auth_token
