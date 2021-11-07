@@ -5,17 +5,3 @@
       debug:
         msg: "{{fusionComputeIP}} IP  {{headers}}"
         
-    - name: login
-      uri: 
-       url: "https://{{fusionComputeIP}}:7443/service/session"
-       validate_certs: no
-       return_content: yes
-       body_format: json
-       method: POST
-       headers: "{{headers}}"
-       
-      register: login
-        
-    - name: Print token
-      debug:
-        var: login.x_auth_token
