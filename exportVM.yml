@@ -1,0 +1,7 @@
+- name: ExportVM
+  hosts: localhost
+  tasks:
+    - name: login
+      debug:
+        msg: "IP: {{fusionComputeIP}} >>>> Headers: {{headers}} >>>>> VM a esportar: {{vmName2Export}}"
+        

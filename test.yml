@@ -1,7 +1,0 @@
-- name: login
-  hosts: localhost
-  tasks:
-    - name: login
-      debug:
-        msg: "IP: {{fusionComputeIP}} >>>> Headers: {{headers}}"
-        
