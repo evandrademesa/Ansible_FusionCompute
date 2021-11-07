@@ -1,7 +1,7 @@
-- name: show-info
-   hosts: localhost
-   tasks:
-    - name: show info login
+- name: login
+  hosts: localhost
+  tasks:
+    - name: login
       debug:
         msg: "{{fusionComputeIP}}"
         
