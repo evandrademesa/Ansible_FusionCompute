@@ -58,21 +58,19 @@
       debug:
         var: vms.json
    
-    - name: Print VMnames 
+    - name: Print only VMnames 
       debug: 
         msg="{{ vms.json | json_query("vms[*].name") }}"
-      register: vm_names
-
-    - name: Print VMnames and Uri
+   
+    - name: Print all VMnames and Uri
+      debug: msg="{{ vms.json | json_query(nameanduri) }}"
+      vars:
+        nameanduri: "vms[*].{name:name,uri:uri}"
+       
+    - name: getUri for VM to export
       debug: msg="{{ vms.json | json_query(nameanduri) }}"
       vars:
         nameanduri: "vms[? name=='Test02'].{name:name,uri:uri}"
-      register: vm_name_uri
-    
-    - name: getUri for VM to export
-      debug: msg="{{ vm_name_uri.json | json_query(vmname) }}"
-      vars:
-        vmname: "[name=='Test02'].{name:name,uri:uri}"
       
       
         
