@@ -63,6 +63,6 @@
         msg="{{ vms.json | json_query("vms[*].name"&&"vms[*].uri") }}"
       register: vm_names
      
-    - name: export VM
+    
       
         
