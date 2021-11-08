@@ -3,7 +3,7 @@
   tasks:
     - name: info
       debug:
-        msg: "IP: {{fusionComputeIP}} >>>> Headers: {{headers}} >>>>> VM a esportar: {{vmName2Export}}"
+        msg: "IP: {{fusionComputeIP}} >>>> VM a esportar: {{vmName2Export}}"
         
     - name: login
       uri: 
@@ -12,11 +12,49 @@
        return_content: yes
        body_format: json
        method: POST
-       headers: "{{headers}}"
+       headers: "{{headersLogin}}"
          
       register: login
         
     - name: Print token
       debug:
         var: login.x_auth_token
+      
+    
+    - name: get siteID
+      uri: 
+       url: "https://{{fusionComputeIP}}:7443/service/sites" #siteUri: /service/sites/
+       validate_certs: no
+       return_content: yes
+       body_format: json
+       method: GET
+       headers: "{{headersGET}}"         
+      register: sites
+      
+    - name: Print sites 
+      debug:
+        var: sites.json
+      
+    - name: get sites uri #siteUri: /service/sites/site_id/
+      debug: 
+        msg="{{ sites.json | json_query("sites[*].uri") }}"
+      register: site_uri    
+        
+    - name: Print sitwUri 
+      debug:
+        var: site_uri.msg[0]    
+        
+    - name: get VMs 
+      uri: #<site_uri>/<site_id>/vms
+       url: "https://{{fusionComputeIP}}:7443/{{site_uri.msg[0]}}/vms" 
+       validate_certs: no
+       return_content: yes
+       body_format: json
+       method: GET
+       headers: "{{headersGET}}"
+      register: vms 
+      
+    - name: Print vms 
+      debug:
+        var: vms.json
         
