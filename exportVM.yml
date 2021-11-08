@@ -72,7 +72,7 @@
     - name: getUri for VM to export
       debug: msg="{{ vm_name_uri.json | json_query(vmname) }}"
       vars:
-        vmname: "[? name=={{vmName2Export}}].{name:name,uri:uri}"
+        vmname: "[? name=='{{vmName2Export}}'].{name:name,uri:uri}"
       
       
         
