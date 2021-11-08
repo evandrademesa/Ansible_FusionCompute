@@ -70,9 +70,9 @@
       register: vm_name_uri
     
     - name: getUri for VM to export
-      debug: msg="{{ vms.json | json_query(nameanduri) }}"
+      debug: msg="{{ vm_name_uri.json | json_query(vmname) }}"
       vars:
-        nameanduri: "vms[*].{name:"{{vmName2Export}}",uri:uri}"
+        nameanduri: "vms[*].{name:{{vmName2Export}},uri:uri}"
       
       
         
