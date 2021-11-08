@@ -1,7 +1,22 @@
 - name: ExportVM
   hosts: localhost
   tasks:
-    - name: login
+    - name: info
       debug:
         msg: "IP: {{fusionComputeIP}} >>>> Headers: {{headers}} >>>>> VM a esportar: {{vmName2Export}}"
+        
+    - name: login
+      uri: 
+       url: "https://{{fusionComputeIP}}:7443/service/session"
+       validate_certs: no
+       return_content: yes
+       body_format: json
+       method: POST
+       headers: {{headers}}
+         
+      register: login
+        
+    - name: Print token
+      debug:
+        var: login.x_auth_token
         
