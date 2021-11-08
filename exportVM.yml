@@ -87,7 +87,7 @@
        body: 
          'name': "{{vmName2Export}}"
          'url': "10.50.15.95:/vmexport/"
-         'protocol':"nfs"
+         'protocol': "nfs"
          'username': "NULL"
          'password': "NULL"
          
