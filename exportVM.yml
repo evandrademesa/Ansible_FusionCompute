@@ -85,10 +85,12 @@
        method: POST
        headers: "{{headersGET}}"
        data:
-        name: "{{vmName2Export}}"
-        url: "10.50.15.95/vmexport/"
-        username: NULL
-        password: NULL
+         "name": "{{vmName2Export}}"
+         "format": "ovf"
+         "url": "10.50.15.95:/vmexport/"
+         "protocol": "nfs"
+         "username": NULL
+         "password": NULL
       register: exportVM
       
       
