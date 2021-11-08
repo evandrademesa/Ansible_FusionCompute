@@ -84,7 +84,7 @@
        body_format: json
        method: POST
        headers: "{{headersGET}}"
-       content:
+       data:
          "name": "{{vmName2Export}}"
          "format": "ovf"
          "url": "10.50.15.95:/vmexport/"
