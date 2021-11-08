@@ -8,7 +8,7 @@
     - name: login
       uri: 
        url: "https://{{fusionComputeIP}}:7443/service/session"
-       vdataCertnFormat: "{{dataCertnFormat}}"
+       dataCertnFormat: "{{dataCertnFormat}}"
        method: POST
        headers: "{{headersLogin}}"
          
