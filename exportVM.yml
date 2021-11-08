@@ -12,8 +12,7 @@
        return_content: yes
        body_format: json
        method: POST
-       headers: "{{headersLogin}}"
-         
+       headers: "{{headersLogin}}" 
       register: login
         
     - name: Print token
@@ -76,6 +75,20 @@
     - name: Print vm uri ti export
       debug:
         var: vm_uri.msg[0]
+    
+    - name: exportVM 
+      uri: #<vm_uri>/<id>/action/export HTTP/1.1 
+       url: "https://{{fusionComputeIP}}:7443/{{vm_uri.msg[0]}}/action/export" 
+       validate_certs: no
+       return_content: yes
+       body_format: json
+       method: POST
+       headers: "{{headersGET}}"
+       name: "{{vmName2Export}}"
+       url: "10.50.15.95"
+       username: NULL
+       password: NULL
+      register: exportVM
       
       
       
