@@ -58,7 +58,7 @@
       debug:
         var: vms.json
    
-   - name: Print VMnames 
-     debug: 
-       msg="{{ vms.json | json_query("vms[*].hostname") }}"
+    - name: Print VMnames 
+      debug: 
+        msg="{{ vms.json | json_query("vms[*].hostname") }}"
         
