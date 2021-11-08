@@ -12,7 +12,7 @@
        return_content: yes
        body_format: json
        method: POST
-       headers: {{headers}}
+       headers: "{{headers}}"
          
       register: login
         
