@@ -85,7 +85,7 @@
        method: POST
        headers: "{{headersGET}}"
        body: 
-         'name': "{{vmName2Export}}export"
+         'name': "exportVM-test"
          'url': "10.50.15.95:/vmexport/"
          'protocol': "nfs"
          'username': "NULL"
