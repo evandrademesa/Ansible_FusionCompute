@@ -73,5 +73,10 @@
         nameanduri: "vms[? name=='{{vmName2Export}}'].{name:name,uri:uri}"
       register: vm_uri
       
+    - name: Print vm uri ti export
+      debug:
+        var: vm_uri.msg[0]  
+      
+      
       
         
