@@ -87,8 +87,8 @@
        attributes: 
          name: "{{vmName2Export}}"
          url: "10.50.15.95:/vmexport/"
-         username: NULL
-         password: NULL
+         username: "NULL"
+         password: "NULL"
          
       register: exportVM
       
