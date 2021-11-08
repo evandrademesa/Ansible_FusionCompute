@@ -62,12 +62,10 @@
       debug: 
         msg="{{ vms.json | json_query("vms[*].name") }}"
       register: vm_names
-      
-    - name: export VM
-      ansible.builtin.command: echo {{ name }}
-      loop: "{{ vms.json | json_query("vms[*].name") }}"
-      when: name = vmName2Export
-    
-    
+
+    - name: Print VMnames and Uri
+      debug: msg="{{ vms.json | json_query(nameanduri) }}"
+      vars:
+        nameanduri: "vms[*].{name:name,uri:uri}"
       
         
