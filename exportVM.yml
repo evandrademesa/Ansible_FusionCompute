@@ -8,7 +8,9 @@
     - name: login
       uri: 
        url: "https://{{fusionComputeIP}}:7443/service/session"
-       dataCertnFormat: "{{dataCertnFormat}}"
+       validate_certs: no
+       return_content: yes
+       body_format: json
        method: POST
        headers: "{{headersLogin}}"
          
@@ -22,7 +24,9 @@
     - name: get siteID
       uri: 
        url: "https://{{fusionComputeIP}}:7443/service/sites" #siteUri: /service/sites/
-       dataCertnFormat: "{{dataCertnFormat}}"
+       validate_certs: no
+       return_content: yes
+       body_format: json
        method: GET
        headers: "{{headersGET}}"         
       register: sites
@@ -30,8 +34,7 @@
     - name: Print sites 
       debug:
         var: sites.json
-     
-    
+      
     - name: get sites uri #siteUri: /service/sites/site_id/
       debug: 
         msg="{{ sites.json | json_query("sites[*].uri") }}"
@@ -44,7 +47,9 @@
     - name: get VMs 
       uri: #<site_uri>/<site_id>/vms
        url: "https://{{fusionComputeIP}}:7443/{{site_uri.msg[0]}}/vms" 
-       dataCertnFormat: "{{dataCertnFormat}}"
+       validate_certs: no
+       return_content: yes
+       body_format: json
        method: GET
        headers: "{{headersGET}}"
       register: vms 
