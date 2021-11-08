@@ -81,14 +81,14 @@
        url: "https://{{fusionComputeIP}}:7443/{{vm_uri.msg[0]}}/action/export" 
        validate_certs: no
        return_content: yes
-       body_format: json
+       #body_format: json
        method: POST
        headers: "{{headersGET}}"
        attributes: 
-         name: "{{vmName2Export}}"
-         url: "10.50.15.95:/vmexport/"
-         username: "NULL"
-         password: "NULL"
+         'name': "{{vmName2Export}}"
+         'url': "10.50.15.95:/vmexport/"
+         'username': "NULL"
+         'password': "NULL"
          
       register: exportVM
       
