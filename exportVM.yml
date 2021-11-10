@@ -88,8 +88,6 @@
          'name': "backups"
          'url': "10.50.10.101:/nfs/ebackup"
          'protocol': "nfs"
-         'username': "NULL"
-         'password': "NULL"
-         
+        
       register: exportVM
       
