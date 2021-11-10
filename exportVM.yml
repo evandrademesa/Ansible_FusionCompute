@@ -85,8 +85,8 @@
        method: POST
        headers: "{{headersGET}}"
        body: 
-         'name': "test"
-         'url': "//10.50.15.3/ot"
+         'name': "o"
+         'url': "//10.50.15.3/o"
          'protocol': "cifs"
          'username': "administrator"
          'password': "Huawei12#$"
