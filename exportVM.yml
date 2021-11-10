@@ -85,14 +85,11 @@
        method: POST
        headers: "{{headersGET}}"
        body: 
-         'name': "template1"
-         'url': "\\10.50.15.3\o\"
-         
+         'name': "test"
+         'url': "//10.50.15.3/ot"
+         'protocol': "cifs"
          'username': "administrator"
          'password': "Huawei12#$"
          
       register: exportVM
       
-      
-      
-        
