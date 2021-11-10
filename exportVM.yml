@@ -85,9 +85,13 @@
        method: POST
        headers: "{{headersGET}}"
        body: 
-         'name': "nfs"
-         'url': "10.50.10.101:/nfs/ebackup"
-         'protocol': "nfs"
+         's3Config': 
+            'serverIP':"ecs-test.obs.na-mexico-1.myhuaweicloud.com"
+            'port':"HTTPS"
+            'accessKey':"JO2ILB6T5WRMXYABB13E"
+            'secretKey':"dKoM9PzVRW69kYYU0uIWacEFJIqznrQvSjrr1t1O"
+            'bucketName':"ecs-test"
+            'key':"TEST"
         
       register: exportVM
       
