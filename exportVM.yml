@@ -85,7 +85,7 @@
        method: POST
        headers: "{{headersGET}}"
        body: 
-         'name': "/test"
+         'name': "template"
          'url': "//10.50.5.238/e"
          'protocol': "cifs" #by dfault cifs
          'username': "NULL"
