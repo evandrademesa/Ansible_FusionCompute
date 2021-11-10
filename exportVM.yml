@@ -85,7 +85,7 @@
        method: POST
        headers: "{{headersGET}}"
        body: 
-         'name': "backups"
+         'name': "ebackup"
          'url': "10.50.10.101:/nfs/ebackup"
          'protocol': "nfs"
         
