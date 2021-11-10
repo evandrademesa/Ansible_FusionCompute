@@ -85,7 +85,7 @@
        method: POST
        headers: "{{headersGET}}"
        body: 
-        protocol: "server-https"
+        protocol: "uds"
         serverIP: "ecs-test.obs.na-mexico-1.myhuaweicloud.com"
         port: "443"
         accessKey: "JO2ILB6T5WRMXYABB13E"
