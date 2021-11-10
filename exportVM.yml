@@ -86,10 +86,10 @@
        headers: "{{headersGET}}"
        body: 
          'name': "template"
-         'url': "//10.50.5.238/e"
+         'url': "\\10.50.15.3\o"
          'protocol': "cifs" #by dfault cifs
-         'username': "NULL"
-         'password': "NULL"
+         'username': "administrator"
+         'password': "Huawei12#$"
          
       register: exportVM
       
