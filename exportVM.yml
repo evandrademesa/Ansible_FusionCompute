@@ -86,8 +86,8 @@
        headers: "{{headersGET}}"
        body: 
          'name': "test"
-         'url': "10.50.15.95:/vmexport/test"
-         'protocol': "nfs"
+         'url': "\\10.50.5.238\e"
+         #'protocol': "nfs" by dfault cifs
          'username': "NULL"
          'password': "NULL"
          
