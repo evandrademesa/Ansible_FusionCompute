@@ -85,14 +85,17 @@
        method: POST
        headers: "{{headersGET}}"
        body: 
-        protocol: "uds"
-        s3Config:
-         serverIP: "119.8.6.18"
-         port: "443"
-         accessKey: "JO2ILB6T5WRMXYABB13E"
-         secretKey: "dKoM9PzVRW69kYYU0uIWacEFJIqznrQvSjrr1t1O"
-         bucketName: "ecs-test"
-         key: "TEST"
+        protocol: "nfs"
+        format: "ovf"
+        name: "test"
+        url: "10.50.10.101:/nfs/"
+        #s3Config:
+         #serverIP: "119.8.6.18"
+         #port: "443"
+         #accessKey: "JO2ILB6T5WRMXYABB13E"
+         #secretKey: "dKoM9PzVRW69kYYU0uIWacEFJIqznrQvSjrr1t1O"
+         #bucketName: "ecs-test"
+         #key: "TEST"
         
       register: exportVM
       
