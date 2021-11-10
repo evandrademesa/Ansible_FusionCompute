@@ -89,6 +89,7 @@
         format: "ovf"
         name: "nfs"
         url: "10.50.10.101:/nfs"
+        isOverwrite: true
         #s3Config:
          #serverIP: "119.8.6.18"
          #port: "443"
