@@ -87,8 +87,8 @@
        body: 
         protocol: "nfs"
         format: "ovf"
-        name: "vanelope"
-        url: "10.50.10.101:/vanelope"
+        name: "vmName2Export"
+        url: "10.50.10.101:/vmName2Export"
         isOverwrite: true
         #s3Config:
          #serverIP: "119.8.6.18"
