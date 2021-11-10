@@ -86,12 +86,12 @@
        headers: "{{headersGET}}"
        body: 
         s3Config: 
-         serverIP:"ecs-test.obs.na-mexico-1.myhuaweicloud.com"
-         port:"443"
-         accessKey:"JO2ILB6T5WRMXYABB13E"
-         secretKey:"dKoM9PzVRW69kYYU0uIWacEFJIqznrQvSjrr1t1O"
-         bucketName:"ecs-test"
-         key:"TEST"
+         serverIP: "ecs-test.obs.na-mexico-1.myhuaweicloud.com"
+         port: "443"
+         accessKey: "JO2ILB6T5WRMXYABB13E"
+         secretKey: "dKoM9PzVRW69kYYU0uIWacEFJIqznrQvSjrr1t1O"
+         bucketName: "ecs-test"
+         key: "TEST"
         
       register: exportVM
       
