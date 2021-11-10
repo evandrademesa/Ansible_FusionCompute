@@ -86,10 +86,10 @@
        headers: "{{headersGET}}"
        body: 
          'name': "backups"
-         'url': "//10.50.15.3/backups"
-         'protocol': "cifs"
-         'username': "administrator"
-         'password': "Huawei12#$"
+         'url': "10.50.10.101:/nfs/ebackup"
+         'protocol': "nfs"
+         'username': "NULL"
+         'password': "NULL"
          
       register: exportVM
       
