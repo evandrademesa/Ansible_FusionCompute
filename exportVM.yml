@@ -87,7 +87,7 @@
        body: 
         protocol: "uds"
         s3Config:
-         serverIP: "ecs-test.obs.na-mexico-1.myhuaweicloud.com"
+         serverIP: "119.8.6.18"
          port: "443"
          accessKey: "JO2ILB6T5WRMXYABB13E"
          secretKey: "dKoM9PzVRW69kYYU0uIWacEFJIqznrQvSjrr1t1O"
