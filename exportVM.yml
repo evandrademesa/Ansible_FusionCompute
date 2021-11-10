@@ -85,8 +85,8 @@
        method: POST
        headers: "{{headersGET}}"
        body: 
-         'name': "ecs-test"
-         'url': "ecs-test.obs.na-mexico-1.myhuaweicloud.com:/ecs-test"
+         'name': "nfs"
+         'url': "10.50.10.101:/nfs/ebackup"
          'protocol': "nfs"
         
       register: exportVM
