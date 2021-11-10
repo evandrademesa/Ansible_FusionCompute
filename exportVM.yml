@@ -86,8 +86,8 @@
        headers: "{{headersGET}}"
        body: 
          'name': "template1"
-         'url': "\\10.50.15.3\obs\"
-         'protocol': "cifs" #by dfault cifs
+         'url': "\\10.50.15.3\o\"
+         
          'username': "administrator"
          'password': "Huawei12#$"
          
