@@ -88,7 +88,7 @@
         protocol: "nfs"
         format: "ovf"
         name: "test"
-        url: "10.50.10.101:/nfs/"
+        url: "10.50.10.101:/nfs"
         #s3Config:
          #serverIP: "119.8.6.18"
          #port: "443"
