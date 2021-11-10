@@ -87,7 +87,7 @@
        body: 
          'name': "test"
          'url': "//10.50.5.238/e"
-         'protocol': "cifs" by dfault cifs
+         'protocol': "cifs" #by dfault cifs
          'username': "NULL"
          'password': "NULL"
          
